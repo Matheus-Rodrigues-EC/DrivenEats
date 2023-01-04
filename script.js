@@ -1,7 +1,11 @@
-function ItemSelect(border) {
-    const select = document.querySelector("Request");
+function ItemSelect(div) {
+    const select = document.querySelector();
 
-    select.style.border = "#32B72F";
+    select.style.width = "172px";
+    select.style.height = "216px";
+    select.style.backgroundColor = "#FFFFFF";
+    select.style.borderRadius = "9px";
+    select.style.border = "5px solid #32B72F";
 }
 
 function ToggleMode(button){
