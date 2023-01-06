@@ -104,7 +104,20 @@ function ConfirmRequest(){
 }
 
 function ConfirmBtn(Btn){
-    let jan = window.open("https://wa.me/+5585992699074", "janelaNova");
+
+    let Name = prompt("informe seu nome.");
+    let Address = prompt("Informe seu Endereço.");
+
+    let uri = `Olá, gostaria de fazer o pedido. \n\n`
+            + `- Prato: ${this.Plate} \n`
+            + `- Bebida: ${this.Drink} \n`
+            + `- Sobremesa: ${this.Dessert} \n`
+            + `*Valor Total* --- ` + `R$ ${this.Total.toFixed(2)} \n\n` 
+            + `Nome: ${Name} \n` 
+            + `Endereço: ${Address}`;
+    let encoded = encodeURIComponent(uri);
+    Btn = window.open(`https://wa.me/+5585992699074/?text=${encoded}`, "janelaNova");
+    Btn = window.location.reload();
 }
 
 function Cancel(Btn){
