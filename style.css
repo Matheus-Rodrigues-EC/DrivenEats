@@ -118,11 +118,15 @@
 }
 
 .Icon{
-    display: none;
+    display: flex;
     width: 16px;
     background-color: #32B72F;
     color: #FFFFFF;
     border-radius: 50%;
+}
+
+.NoIcon{
+    display: none;
 }
 
 #DownBar{

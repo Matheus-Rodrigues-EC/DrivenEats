@@ -13,9 +13,13 @@ Plates.forEach((Plate, Selection) => {
         Selection.forEach((UnSelect) => {
             if(UnSelect !== undefined){
                 UnSelect.classList.remove('Select');
+                UnSelect.querySelector('.hydrated').classList.remove('Icon');
+                UnSelect.querySelector('.hydrated').classList.add('NoIcon');
             }
         })
         Plate.classList.add('Select');
+        Plate.querySelector('.hydrated').classList.remove('NoIcon');
+        Plate.querySelector('.hydrated').classList.add('Icon');
         this.Plate = Plate.querySelector(".NameRequest").innerHTML;
         this.PlatePrice = Plate.querySelector(".value").innerHTML;
         VPlate = true;
@@ -41,9 +45,13 @@ Drinks.forEach((Drink, Selection) => {
         Selection.forEach((UnSelect) => {
             if(UnSelect !== undefined){
                 UnSelect.classList.remove('Select');
+                UnSelect.querySelector('.hydrated').classList.remove('Icon');
+                UnSelect.querySelector('.hydrated').classList.add('NoIcon');
             }
         })
         Drink.classList.add('Select');
+        Drink.querySelector('.hydrated').classList.remove('NoIcon');
+        Drink.querySelector('.hydrated').classList.add('Icon');
         this.Drink = Drink.querySelector(".NameRequest").innerHTML;
         this.DrinkPrice = Drink.querySelector(".value").innerHTML;
         VDrink = true;
@@ -70,9 +78,13 @@ Desserts.forEach((Dessert) => {
         Selection.forEach((UnSelect) => {
             if(UnSelect !== undefined){
                 UnSelect.classList.remove('Select');
+                UnSelect.querySelector('.hydrated').classList.remove('Icon');
+                UnSelect.querySelector('.hydrated').classList.add('NoIcon');
             }
         })
         Dessert.classList.add('Select');
+        Dessert.querySelector('.hydrated').classList.remove('NoIcon');
+        Dessert.querySelector('.hydrated').classList.add('Icon');
         this.Dessert = Dessert.querySelector(".NameRequest").innerHTML;
         this.DessertPrice = Dessert.querySelector(".value").innerHTML;
         VDessert = true;
