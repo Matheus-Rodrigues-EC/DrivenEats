@@ -11,29 +11,15 @@ Plates.forEach((Plate, Selection) => {
     Selection = document.querySelectorAll(".Plate",".Select");
     Plate.addEventListener('click', (event) => {
         Selection.forEach((UnSelect) => {
-            if(UnSelect !== undefined){
-                UnSelect.classList.remove('Select');
-                UnSelect.querySelector('.hydrated').classList.remove('Icon');
-                UnSelect.querySelector('.hydrated').classList.add('NoIcon');
-            }
+            ActiveIcon(UnSelect);
         })
-        Plate.classList.add('Select');
-        Plate.querySelector('.hydrated').classList.remove('NoIcon');
-        Plate.querySelector('.hydrated').classList.add('Icon');
+        ActiveSelection(Plate);
         this.Plate = Plate.querySelector(".NameRequest").innerHTML;
         this.PlatePrice = Plate.querySelector(".value").innerHTML;
         VPlate = true;
         console.log(this.Plate);
         console.log(this.PlatePrice);
-
-        if(VPlate !== false){
-            if(VDrink !== false){
-                if(VDessert !== false){
-                    Verify.parentNode.removeChild(Verify);
-                    Bar.innerHTML = '<button class="ResponseEnable">Fechar pedido</button>';
-                }
-            }
-        }
+        VerifyRequest();
     })
 })
 // ===--- Funções para as Bebidas
@@ -43,29 +29,15 @@ Drinks.forEach((Drink, Selection) => {
     Selection = document.querySelectorAll(".Drink",".Select");
     Drink.addEventListener('click', (event) => {
         Selection.forEach((UnSelect) => {
-            if(UnSelect !== undefined){
-                UnSelect.classList.remove('Select');
-                UnSelect.querySelector('.hydrated').classList.remove('Icon');
-                UnSelect.querySelector('.hydrated').classList.add('NoIcon');
-            }
+            ActiveIcon(UnSelect);
         })
-        Drink.classList.add('Select');
-        Drink.querySelector('.hydrated').classList.remove('NoIcon');
-        Drink.querySelector('.hydrated').classList.add('Icon');
+        ActiveSelection(Drink);
         this.Drink = Drink.querySelector(".NameRequest").innerHTML;
         this.DrinkPrice = Drink.querySelector(".value").innerHTML;
         VDrink = true;
         console.log(this.Drink);
         console.log(this.DrinkPrice);
-        
-        if(VPlate !== false){
-            if(VDrink !== false){
-                if(VDessert !== false){
-                    Verify.parentNode.removeChild(Verify);
-                    Bar.innerHTML = '<button class="ResponseEnable">Fechar pedido</button>';
-                }
-            }
-        }
+        VerifyRequest();
     })
 })
 
@@ -76,49 +48,42 @@ Desserts.forEach((Dessert) => {
     Selection = document.querySelectorAll(".Dessert",".Select");
     Dessert.addEventListener('click', (event) => {
         Selection.forEach((UnSelect) => {
-            if(UnSelect !== undefined){
-                UnSelect.classList.remove('Select');
-                UnSelect.querySelector('.hydrated').classList.remove('Icon');
-                UnSelect.querySelector('.hydrated').classList.add('NoIcon');
-            }
+            ActiveIcon(UnSelect);
         })
-        Dessert.classList.add('Select');
-        Dessert.querySelector('.hydrated').classList.remove('NoIcon');
-        Dessert.querySelector('.hydrated').classList.add('Icon');
+        ActiveSelection(Dessert);
         this.Dessert = Dessert.querySelector(".NameRequest").innerHTML;
         this.DessertPrice = Dessert.querySelector(".value").innerHTML;
         VDessert = true;
         console.log(this.Dessert);
         console.log(this.DessertPrice);
-        
-        if(VPlate !== false){
-            if(VDrink !== false){
-                if(VDessert !== false){
-                    Verify.parentNode.removeChild(Verify);
-                    Bar.innerHTML = '<button class="ResponseEnable">Fechar pedido</button>';
-                }
-            }
-        }
+        VerifyRequest();
     })
-
 })
 
 // ===--- Função para ativar o botão verde
 
-/*function VerifyRequest(){
-    const Verify = document.querySelector(".DoRequest");
-    const Bar = document.getElementById("DownBar");
-    if(this.Plate !== undefined){
-        if(this.Drink !== undefined){
-            if(this.Dessert !== undefined){
-                //Verify.style.backgroundColor = "#32B72F";
-                //Verify.style.display = "none"
+function VerifyRequest(){
+    if(VPlate !== false){
+        if(VDrink !== false){
+            if(VDessert !== false){
                 Verify.parentNode.removeChild(Verify);
                 Bar.innerHTML = '<button class="ResponseEnable">Fechar pedido</button>';
-                //Verify.innerText = "Fechar Pedido";
             }
-        }   
+        }
     }
 }
 
-*/
+function ActiveIcon(UnSelect){
+    if(UnSelect !== undefined){
+        UnSelect.classList.remove('Select');
+        UnSelect.querySelector('.hydrated').classList.remove('Icon');
+        UnSelect.querySelector('.hydrated').classList.add('NoIcon');
+    }
+}
+
+function ActiveSelection(selection){
+    selection.classList.add('Select');
+    selection.querySelector('.hydrated').classList.remove('NoIcon');
+    selection.querySelector('.hydrated').classList.add('Icon');
+}
+
