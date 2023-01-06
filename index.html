@@ -10,12 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <body>
-    <div id="Container">
-        <div id="UpBar">
-            <h1 id="Title">DrivenEats</h1>
-            <h2 id="Subtitle">Sua comida em 6 minutos</h2>
+    <div class="Container">
+        <div class="UpBar">
+            <h1 class="Title">DrivenEats</h1>
+            <h2 class="Subtitle">Sua comida em 6 minutos</h2>
         </div>
-        <div id="Content">
+        <div class="Content">
             <div class="Row">
                 <h2 class="RequestTitle">Primeiro, seu prato.</h2>
                 <ul class="List">
@@ -104,7 +104,7 @@
                 </ul>
             </div>
         </div>
-        <div id="DownBar">
+        <div class="DownBar">
             <button disabled class="ResponseDisable DoRequest">Selecione os 3 itens para fechar o pedido</button>
         </div>
         <div class="Confirmation none">
@@ -114,7 +114,9 @@
                 <p class="ConfirmDrink"></p>
                 <p class="ConfirmDessert"></p>
                 <p Class="ConfirmTotal"></p>
-                <button class="ConfirmBtn">Tudo certo, pode pedir!</button>
+                <button class="ConfirmBtn" onClick="ConfirmBtn()">
+                        Tudo certo, pode pedir!
+                </button>
                 <button class="CancelConfirm" onClick="Cancel()" >Cancelar</button>
             </div>
     

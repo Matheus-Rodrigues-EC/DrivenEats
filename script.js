@@ -2,7 +2,7 @@
     let VDrink = false;
     let VDessert = false;
     const Verify = document.querySelector('.DoRequest');
-    const Bar = document.getElementById("DownBar");
+    const Bar = document.querySelector(".DownBar");
     
 
 // ===--- Funções para os pratos
@@ -17,8 +17,6 @@ Plates.forEach((Plate, Selection) => {
         this.Plate = Plate.querySelector(".NameRequest").innerHTML;
         this.PlatePrice = Plate.querySelector(".value").innerHTML;
         VPlate = true;
-        console.log(this.Plate);
-        console.log(this.PlatePrice);
         VerifyRequest();
     })
 })
@@ -35,8 +33,6 @@ Drinks.forEach((Drink, Selection) => {
         this.Drink = Drink.querySelector(".NameRequest").innerHTML;
         this.DrinkPrice = Drink.querySelector(".value").innerHTML;
         VDrink = true;
-        console.log(this.Drink);
-        console.log(this.DrinkPrice);
         VerifyRequest();
     })
 })
@@ -54,8 +50,6 @@ Desserts.forEach((Dessert) => {
         this.Dessert = Dessert.querySelector(".NameRequest").innerHTML;
         this.DessertPrice = Dessert.querySelector(".value").innerHTML;
         VDessert = true;
-        console.log(this.Dessert);
-        console.log(this.DessertPrice);
         VerifyRequest();
     })
 })
@@ -107,6 +101,10 @@ function ConfirmRequest(){
     const ViewConfirmation = document.querySelector('.Confirmation');
     ViewConfirmation.classList.remove('none');
     ViewConfirmation.classList.add('View');
+}
+
+function ConfirmBtn(Btn){
+    let jan = window.open("https://wa.me/+5585992699074", "janelaNova");
 }
 
 function Cancel(Btn){
