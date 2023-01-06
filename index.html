@@ -19,95 +19,97 @@
             <div class="Row">
                 <h2 class="RequestTitle">Primeiro, seu prato.</h2>
                 <ul class="List">
-                    <li class="Request" id="Prato1" onClick="Prato1(), VerifyRequest()">
+                    <li class="Request Plate" onClick="VerifyRequest()">
                         <img src="./assets/frango_yin_yang.png" alt="frango" class="RequestIMG"/>
                         <p class="NameRequest">Frango Yin Yang</p>
                         <p class="RequestDetails">Um pouco de batata, um pouco de batata</p>
-                        <p class="RequestPrice">R$ 14,90</p>
+                        <p class="RequestPrice"><span>R$ <span class="value"> 14,90 </span> </span> <ion-icon class="Icon" name="checkmark-circle-outline"></ion-icon> </p>
                     </li>
-                    <li class="Request" id="Prato2" onClick="Prato2(), VerifyRequest()">
+                    <li class="Request Plate" onClick="VerifyRequest()">
                         <img src="./assets/frango_yin_yang.png" alt="frango" class="RequestIMG"/>
                         <p class="NameRequest">Frango com Batatas</p>
                         <p class="RequestDetails">Um pouco de batata, um pouco de batata</p>
-                        <p class="RequestPrice">R$ 18,50</p>
+                        <p class="RequestPrice"><span>R$ <span class="value"> 18,50 </span> </span> <ion-icon class="Icon" name="checkmark-circle-outline"></ion-icon> </p>
                     </li>
-                    <li class="Request" id="Prato3" onClick="Prato3(), VerifyRequest()">
+                    <li class="Request Plate" onClick="VerifyRequest()">
                         <img src="./assets/frango_yin_yang.png" alt="frango" class="RequestIMG"/>
                         <p class="NameRequest">Frango ao molho madeira</p>
                         <p class="RequestDetails">Um pouco de batata, um pouco de batata</p>
-                        <p class="RequestPrice">R$ 17,00</p>
+                        <p class="RequestPrice"><span>R$ <span class="value"> 17,00 </span> </span> <ion-icon class="Icon" name="checkmark-circle-outline"></ion-icon> </p>
                     </li>
-                    <li class="Request" id="Prato4" onClick="Prato4(), VerifyRequest()">
+                    <li class="Request Plate" onClick="VerifyRequest()">
                         <img src="./assets/frango_yin_yang.png" alt="frango" class="RequestIMG"/>
                         <p class="NameRequest">Filé de Frango com fritas</p>
                         <p class="RequestDetails">Um pouco de batata, um pouco de batata</p>
-                        <p class="RequestPrice">R$ 22,50</p>
+                        <p class="RequestPrice"><span>R$ <span class="value"> 22,50 </span> </span> <ion-icon class="Icon" name="checkmark-circle-outline"></ion-icon> </p>
                     </li>
                 </ul>
             </div>
             <div class="Row">
                 <h2 class="RequestTitle">Agora, sua bebida.</h2>
-                <div class="List">
-                    <div class="Request" id="Bebida1" onClick="Bebida1(), VerifyRequest()">
+                <ul class="List">
+                    <li class="Request Drink" onClick="VerifyRequest()">
                         <img src="./assets/coca-cola.png" alt="Coca-cola" class="RequestIMG"/>
                         <p class="NameRequest">Coca-Cola</p>
                         <p class="RequestDetails">Lata 350ml</p>
-                        <p class="RequestPrice">R$ 4,90</p>
-                    </div>
-                    <div class="Request" id="Bebida2" onClick="Bebida2(), VerifyRequest()">
+                        <p class="RequestPrice"><span>R$ <span class="value"> 4,90 </span> </span> <ion-icon class="Icon" name="checkmark-circle-outline"></ion-icon> </p>
+                    </li>
+                    <li class="Request Drink" onClick="VerifyRequest()">
                         <img src="./assets/coca-cola.png" alt="Coca Zero" class="RequestIMG"/>
                         <p class="NameRequest">Coca Zero</p>
                         <p class="RequestDetails">Lata 350ml</p>
-                        <p class="RequestPrice">R$ 5,50</p>
-                    </div>
-                    <div class="Request" id="Bebida3" onClick="Bebida3(), VerifyRequest()">
+                        <p class="RequestPrice"><span>R$ <span class="value"> 5,50 </span> </span> <ion-icon class="Icon" name="checkmark-circle-outline"></ion-icon> </p>
+                    </li>
+                    <li class="Request Drink" onClick="VerifyRequest()">
                         <img src="./assets/coca-cola.png" alt="Coca Light" class="RequestIMG"/>
                         <p class="NameRequest">Coca Light</p>
                         <p class="RequestDetails">Lata 350ml</p>
-                        <p class="RequestPrice">R$ 3,50</p>
-                    </div>
-                    <div class="Request" id="Bebida4" onClick="Bebida4(), VerifyRequest()">
+                        <p class="RequestPrice"><span>R$ <span class="value"> 3,50 </span> </span> <ion-icon class="Icon" name="checkmark-circle-outline"></ion-icon> </p>
+                    </li>
+                    <li class="Request Drink" onClick="VerifyRequest()">
                         <img src="./assets/coca-cola.png" alt="Coca Café" class="RequestIMG"/>
                         <p class="NameRequest">Coca Café</p>
                         <p class="RequestDetails">Lata 350ml</p>
-                        <p class="RequestPrice">R$ 6,00</p>
-                    </div>
-                </div>
+                        <p class="RequestPrice"><span>R$ <span class="value"> 6,00 </span> </span> <ion-icon class="Icon" name="checkmark-circle-outline"></ion-icon> </p>
+                    </li>
+                </ul>
             </div>
             <div class="Row">
                 <h2 class="RequestTitle">Por fim, sua sobremesa.</h2>
-                <div class="List">
-                    <div class="Request" id="Sobremesa1" onClick="Sobremesa1(), VerifyRequest()">
+                <ul class="List">
+                    <li class="Request Dessert" onClick="VerifyRequest()">
                         <img src="./assets/pudim.png" alt="Pudim dahora" class="RequestIMG"/>
                         <p class="NameRequest">Pudim</p>
                         <p class="RequestDetails">Apenas Pudim</p>
-                        <p class="RequestPrice">R$ 4,90</p>
-                    </div>
-                    <div class="Request" id="Sobremesa2" onClick="Sobremesa2(), VerifyRequest()">
+                        <p class="RequestPrice"><span>R$ <span class="value"> 4,90 </span> </span> <ion-icon class="Icon" name="checkmark-circle-outline"></ion-icon> </p>
+                    </li>
+                    <li class="Request Dessert" onClick="VerifyRequest()">
                         <img src="./assets/pudim.png" alt="Pudim dahora" class="RequestIMG"/>
                         <p class="NameRequest">Pudim</p>
                         <p class="RequestDetails">Apenas Pudim</p>
-                        <p class="RequestPrice">R$ 4,90</p>
-                    </div>
-                    <div class="Request" id="Sobremesa3" onClick="Sobremesa3(), VerifyRequest()">
+                        <p class="RequestPrice"><span>R$ <span class="value"> 4,90 </span> </span> <ion-icon class="Icon" name="checkmark-circle-outline"></ion-icon> </p>
+                    </li>
+                    <li class="Request Dessert" onClick="VerifyRequest()">
                         <img src="./assets/pudim.png" alt="Pudim dahora" class="RequestIMG"/>
                         <p class="NameRequest">Pudim</p>
                         <p class="RequestDetails">Apenas Pudim</p>
-                        <p class="RequestPrice">R$ 4,90</p>
-                    </div>
-                    <div class="Request" id="Sobremesa4" onClick="Sobremesa4(), VerifyRequest()">
+                        <p class="RequestPrice"><span>R$ <span class="value"> 4,90 </span> </span> <ion-icon class="Icon" name="checkmark-circle-outline"></ion-icon> </p>
+                    </li>
+                    <li class="Request Dessert" onClick="VerifyRequest()">
                         <img src="./assets/pudim.png" alt="Pudim dahora" class="RequestIMG"/>
                         <p class="NameRequest">Pudim</p>
                         <p class="RequestDetails">Apenas Pudim</p>
-                        <p class="RequestPrice">R$ 4,90</p>
-                    </div>
-                </div>
+                        <p class="RequestPrice"><span>R$ <span class="value"> 4,90 </span> </span> <ion-icon class="Icon" name="checkmark-circle-outline"></ion-icon> </p>
+                    </li>
+                </ul>
             </div>
         </div>
         <div id="DownBar">
-            <button disabled id="ResponseDisable">Selecione os 3 itens para fechar o pedido</button>
+            <button disabled class="ResponseDisable DoRequest" >Selecione os 3 itens para fechar o pedido</button>
         </div>
     </div>
     <script src="./script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
