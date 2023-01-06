@@ -1,20 +1,12 @@
-class Meal{
-    constructor(Plate, Drink, Dessert, PlatePrice, DrinkPrice, DessertPrice, VPlate, VDrink, VDessert){
-        this.Plate = Plate;
-        this.Drink = Drink;
-        this.Dessert = Dessert;
-        PlatePrice = PlatePrice;
-        DrinkPrice = DrinkPrice;
-        DessertPrice = DessertPrice;
-        VPlate = false;
-        VDrink = false;
-        VDessert = false;
-    }
-}
+    let VPlate = false;
+    let VDrink = false;
+    let VDessert = false;
+    const Verify = document.querySelector('.DoRequest');
+    const Bar = document.getElementById("DownBar");
+    
 
 // ===--- Funções para os pratos
 let Plates = document.querySelectorAll(".Plate");
-console.log(Plates.length);
 Plates.forEach((Plate, Selection) => {
     Selection = document.querySelectorAll(".Plate",".Select");
     Plate.addEventListener('click', (event) => {
@@ -26,12 +18,20 @@ Plates.forEach((Plate, Selection) => {
         Plate.classList.add('Select');
         this.Plate = Plate.querySelector(".NameRequest").innerHTML;
         this.PlatePrice = Plate.querySelector(".value").innerHTML;
+        VPlate = true;
         console.log(this.Plate);
         console.log(this.PlatePrice);
-        this.VPlate = true;
-    })
-});
 
+        if(VPlate !== false){
+            if(VDrink !== false){
+                if(VDessert !== false){
+                    Verify.parentNode.removeChild(Verify);
+                    Bar.innerHTML = '<button class="ResponseEnable">Fechar pedido</button>';
+                }
+            }
+        }
+    })
+})
 // ===--- Funções para as Bebidas
 let Drinks = document.querySelectorAll(".Drink");
 
@@ -45,10 +45,19 @@ Drinks.forEach((Drink, Selection) => {
         })
         Drink.classList.add('Select');
         this.Drink = Drink.querySelector(".NameRequest").innerHTML;
-        DrinkPrice = Drink.querySelector(".value").innerHTML;
+        this.DrinkPrice = Drink.querySelector(".value").innerHTML;
+        VDrink = true;
         console.log(this.Drink);
         console.log(this.DrinkPrice);
-        this.VDrink = true;
+        
+        if(VPlate !== false){
+            if(VDrink !== false){
+                if(VDessert !== false){
+                    Verify.parentNode.removeChild(Verify);
+                    Bar.innerHTML = '<button class="ResponseEnable">Fechar pedido</button>';
+                }
+            }
+        }
     })
 })
 
@@ -65,15 +74,26 @@ Desserts.forEach((Dessert) => {
         })
         Dessert.classList.add('Select');
         this.Dessert = Dessert.querySelector(".NameRequest").innerHTML;
-        DessertPrice = Dessert.querySelector(".value").innerHTML;
+        this.DessertPrice = Dessert.querySelector(".value").innerHTML;
+        VDessert = true;
         console.log(this.Dessert);
         console.log(this.DessertPrice);
-        this.VDessert = true;
+        
+        if(VPlate !== false){
+            if(VDrink !== false){
+                if(VDessert !== false){
+                    Verify.parentNode.removeChild(Verify);
+                    Bar.innerHTML = '<button class="ResponseEnable">Fechar pedido</button>';
+                }
+            }
+        }
     })
+
 })
 
 // ===--- Função para ativar o botão verde
-function VerifyRequest(button){
+
+/*function VerifyRequest(){
     const Verify = document.querySelector(".DoRequest");
     const Bar = document.getElementById("DownBar");
     if(this.Plate !== undefined){
@@ -88,3 +108,5 @@ function VerifyRequest(button){
         }   
     }
 }
+
+*/
