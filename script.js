@@ -66,8 +66,10 @@ function VerifyRequest(){
     if(VPlate !== false){
         if(VDrink !== false){
             if(VDessert !== false){
-                Verify.parentNode.removeChild(Verify);
-                Bar.innerHTML = '<button class="ResponseEnable">Fechar pedido</button>';
+                if(Verify.querySelector('.ResponseDisable')){
+                    Verify.parentNode.removeChild(Verify);
+                }
+                Bar.innerHTML = '<button class="ResponseEnable" onclick="ConfirmRequest(this)">Fechar pedido</button>';
             }
         }
     }
@@ -87,3 +89,28 @@ function ActiveSelection(selection){
     selection.querySelector('.hydrated').classList.add('Icon');
 }
 
+function ConfirmRequest(){
+    this.Total = (parseFloat(this.PlatePrice) + parseFloat(this.DrinkPrice) + parseFloat(this.DessertPrice));
+    this.PlatePrice = parseFloat(this.PlatePrice);
+    this.DrinkPrice = parseFloat(this.DrinkPrice);
+    this.DessertPrice = parseFloat(this.DessertPrice);
+
+    const ConfirmPlate = document.querySelector('.ConfirmPlate');
+    const ConfirmDrink = document.querySelector('.ConfirmDrink');
+    const ConfirmDessert = document.querySelector('.ConfirmDessert');
+    const ConfirmTotal = document.querySelector('.ConfirmTotal');
+    ConfirmPlate.innerHTML = `<span class="ConfirmMeal"> ${this.Plate}</span><span class="ConfirmMeal">${this.PlatePrice.toFixed(2)}</span>`
+    ConfirmDrink.innerHTML = `<span class="ConfirmMeal"> ${this.Drink}</span></span><span class="ConfirmMeal">${this.DrinkPrice.toFixed(2)}</span>`
+    ConfirmDessert.innerHTML = `<span class="ConfirmMeal"> ${this.Dessert}</span></span><span class="ConfirmMeal">${this.DessertPrice.toFixed(2)}</span>`
+    ConfirmTotal.innerHTML = `<span class="ConfirmTotal">Total </span> <span class="ConfirmTotal">R$ ${this.Total.toFixed(2)}</span>`
+
+    const ViewConfirmation = document.querySelector('.Confirmation');
+    ViewConfirmation.classList.remove('none');
+    ViewConfirmation.classList.add('View');
+}
+
+function Cancel(Btn){
+    Btn = document.querySelector('.Confirmation');
+    Btn.classList.remove('View');
+    Btn.classList.add('none');
+}
