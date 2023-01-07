@@ -8,7 +8,7 @@
 // ===--- Funções para os pratos
 let Plates = document.querySelectorAll(".Plate");
 Plates.forEach((Plate) => {
-    Selection = document.querySelectorAll(".Plate",".Select");
+    let Selection = document.querySelectorAll(".Plate",".Select");
     Plate.addEventListener('click', (event) => {
         Selection.forEach((UnSelect) => {
             ActiveIcon(UnSelect);
@@ -24,7 +24,7 @@ Plates.forEach((Plate) => {
 let Drinks = document.querySelectorAll(".Drink");
 
 Drinks.forEach((Drink) => {
-    Selection = document.querySelectorAll(".Drink",".Select");
+    let Selection = document.querySelectorAll(".Drink",".Select");
     Drink.addEventListener('click', (event) => {
         Selection.forEach((UnSelect) => {
             ActiveIcon(UnSelect);
@@ -41,7 +41,7 @@ Drinks.forEach((Drink) => {
 let Desserts = document.querySelectorAll(".Dessert");
 
 Desserts.forEach((Dessert) => {
-    Selection = document.querySelectorAll(".Dessert",".Select");
+    let Selection = document.querySelectorAll(".Dessert",".Select");
     Dessert.addEventListener('click', (event) => {
         Selection.forEach((UnSelect) => {
             ActiveIcon(UnSelect);
