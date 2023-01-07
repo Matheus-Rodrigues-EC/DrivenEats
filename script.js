@@ -7,7 +7,7 @@
 
 // ===--- Funções para os pratos
 let Plates = document.querySelectorAll(".Plate");
-Plates.forEach((Plate, Selection) => {
+Plates.forEach((Plate) => {
     Selection = document.querySelectorAll(".Plate",".Select");
     Plate.addEventListener('click', (event) => {
         Selection.forEach((UnSelect) => {
@@ -23,7 +23,7 @@ Plates.forEach((Plate, Selection) => {
 // ===--- Funções para as Bebidas
 let Drinks = document.querySelectorAll(".Drink");
 
-Drinks.forEach((Drink, Selection) => {
+Drinks.forEach((Drink) => {
     Selection = document.querySelectorAll(".Drink",".Select");
     Drink.addEventListener('click', (event) => {
         Selection.forEach((UnSelect) => {
@@ -103,7 +103,7 @@ function ConfirmRequest(){
     ViewConfirmation.classList.add('View');
 }
 
-function ConfirmBtn(Btn){
+function ConfirmBtn(){
 
     let Name = prompt("informe seu nome.");
     let Address = prompt("Informe seu Endereço.");
@@ -116,11 +116,11 @@ function ConfirmBtn(Btn){
             + `Nome: ${Name} \n` 
             + `Endereço: ${Address}`;
     let encoded = encodeURIComponent(uri);
-    Btn = window.open(`https://wa.me/+5585999999999/?text=${encoded}`, "janelaNova");
+    Btn = window.open(`https://wa.me/+5585992699074/?text=${encoded}`, "janelaNova");
     Btn = window.location.reload();
 }
 
-function Cancel(Btn){
+function Cancel(){
     Btn = document.querySelector('.Confirmation');
     Btn.classList.remove('View');
     Btn.classList.add('none');
