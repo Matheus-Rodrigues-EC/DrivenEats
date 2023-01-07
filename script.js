@@ -108,11 +108,11 @@ function ConfirmBtn(Btn){
     let Name = prompt("informe seu nome.");
     let Address = prompt("Informe seu Endereço.");
 
-    let uri = `Olá, gostaria de fazer o pedido. \n\n`
+    let uri = `Olá, gostaria de fazer o pedido: \n\n`
             + `- Prato: ${this.Plate} \n`
             + `- Bebida: ${this.Drink} \n`
             + `- Sobremesa: ${this.Dessert} \n`
-            + `*Valor Total* --- ` + `R$ ${this.Total.toFixed(2)} \n\n` 
+            + `Total ` + `R$ ${this.Total.toFixed(2)} \n\n` 
             + `Nome: ${Name} \n` 
             + `Endereço: ${Address}`;
     let encoded = encodeURIComponent(uri);
