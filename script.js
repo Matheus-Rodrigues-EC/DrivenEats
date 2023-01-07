@@ -63,7 +63,7 @@ function VerifyRequest(){
                 if(Verify.querySelector('.ResponseDisable')){
                     Verify.parentNode.removeChild(Verify);
                 }
-                Bar.innerHTML = '<button class="ResponseEnable" onclick="ConfirmRequest(this)">Fechar pedido</button>';
+                Bar.innerHTML = '<button data-test="order-btn" class="ResponseEnable" onclick="ConfirmRequest(this)">Fechar pedido</button>';
             }
         }
     }
@@ -116,7 +116,7 @@ function ConfirmBtn(Btn){
             + `Nome: ${Name} \n` 
             + `Endereço: ${Address}`;
     let encoded = encodeURIComponent(uri);
-    Btn = window.open(`https://wa.me/+5585992699074/?text=${encoded}`, "janelaNova");
+    Btn = window.open(`https://wa.me/+5585999999999/?text=${encoded}`, "janelaNova");
     Btn = window.location.reload();
 }
 
