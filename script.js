@@ -112,7 +112,7 @@ function ConfirmBtn(Btn){
             + `- Prato: ${this.Plate} \n`
             + `- Bebida: ${this.Drink} \n`
             + `- Sobremesa: ${this.Dessert} \n`
-            + `Total ` + `R$ ${this.Total} \n\n` 
+            + `Total ` + `R$ ${this.Total.toFixed(2)} \n\n` 
             + `Nome: ${Name} \n` 
             + `Endereço: ${Address}`;
     let encoded = encodeURIComponent(uri);
